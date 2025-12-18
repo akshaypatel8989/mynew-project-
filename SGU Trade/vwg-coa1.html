@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VWG COA</title>
+<link rel="stylesheet" href="style.css">
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+
+        .coa-title {
+            text-align: center;
+            color: #1ba23e;
+            font-size: 30px;
+            font-weight: 700;
+            margin-bottom: 25px;
+            margin-top: 20px;
+        }
+
+        .coa-section-title {
+            background: #1ba23e;
+            color: #fff;
+            padding: 8px 15px;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 4px 4px 0 0;
+        }
+
+        .coa-table {
+            border: 2px solid #1ba23e !important;
+        }
+
+        .coa-table th {
+            background: #f6f6f6;
+            width: 25%;
+        }
+
+        .coa-table td,
+        .coa-table th {
+            padding: 10px;
+            font-size: 14px;
+        }
+    </style>
+
+</head>
+
+<body>
+ <header class="header">
+
+        <!-- MOBILE HEADER -->
+        <div class="mobile-header">
+            <a href="index.html">
+                <img src="./images/Header-Logo.png" class="mobile-logo">
+            </a>
+            <div id="hamburger" class="hamburger">☰</div>
+        </div>
+
+        <!-- DESKTOP NAV -->
+        <nav class="main-nav">
+            <div class="logo">
+               <a href="index.html" class="text-decoration-none"> <img src="./images/Header-Logo.png" alt="ADM Logo"></a>
+            </div>
+
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="marketserved.html">Market Served</a></li>
+
+                <!-- INGREDIENTS – NO ANCHOR TAG -->
+                <li class="dropdown">
+                    <span class="drop-btn"><a href="ingredients.html" class="text-decoration-none">Ingredients</a> ▾</span>
+
+                    <ul class="dropdown-menu">
+                        <li><a href="bakery.html">Bakery</a></li>
+                        <li><a href="confectionery.html">Confectionery</a></li>
+                        <li><a href="ice-cream.html">Ice Cream & Toppings</a></li>
+                        <li><a href="beverages.html">Beverages</a></li>
+                        <li><a href="dairy.html">Dairy</a></li>
+                        <li><a href="health&Nutrition.html">Health & Nutrition</a></li>
+                        <li><a href="sauces.html">Sauces & Condiments</a></li>
+                        <li><a href="fat.html">Edible Fat & Other Product</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="career.html">Career</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- MOBILE SIDE MENU -->
+    <div id="sideMenu" class="side-menu">
+
+        <div class="close-btn">&times;</div>
+
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="marketserved.html">Market Served</a>
+
+        <!-- MOBILE INGREDIENTS DROPDOWN -->
+        <div class="mobile-dropdown">
+            <div class="mobile-drop-btn"><a href="ingredients.html" class="text-decoration-none pr-2">Ingredients</a>  ▼</div>
+
+            <div class="mobile-drop-content">
+                <a href="bakery.html">Bakery</a>
+                <a href="confectionery.html">Confectionery</a>
+                <a href="ice-cream.html">Ice Cream & Toppings</a>
+                <a href="beverages.html">Beverages</a>
+                <a href="dairy.html">Dairy</a>
+                <a href="health&Nutrition.html">Health & Nutrition</a>
+                <a href="sauces.html">Sauces & Condiments</a>
+                <a href="fat.html">Edible Fat & Other Product</a>
+            </div>
+        </div>
+
+        <a href="career.html">Career</a>
+        <a href="contact-us.html">Contact Us</a>
+    </div>
+    <div class="container mt-4">
+
+        <!-- PAGE TITLE -->
+        <h2 class="coa-title">VWG COA</h2>
+
+        <!-- TOP CERTIFICATE SECTION -->
+        <div class="coa-section-title">CERTIFICATE OF ANALYSIS</div>
+        <table class="table table-bordered coa-table">
+            <tbody>
+                <tr>
+                    <th>Product Name</th>
+                    <td>Vital wheat gluten</td>
+                    <th>Manufacture Dates</th>
+                    <td>2019/11/05</td>
+                </tr>
+                <tr>
+                    <th>Batch Number</th>
+                    <td>20191104</td>
+                    <th>Report Date</th>
+                    <td>2019/11/06</td>
+                </tr>
+                <tr>
+                    <th>Batch Quantity</th>
+                    <td>66 MT</td>
+                    <th>Sampling Date</th>
+                    <td>2019/11/05 at 09 a.m.</td>
+                </tr>
+                <tr>
+                    <th>Invoice NO.</th>
+                    <td>RX20190807-2</td>
+                    <th>Expiration Date</th>
+                    <td>2020/11/04</td>
+                </tr>
+                <tr>
+                    <th>Type of Products</th>
+                    <td>NullientAdditives</td>
+                    <th>Primary Ingredient</th>
+                    <td>Wheat flour</td>
+                </tr>
+                <tr>
+                    <th>Wheat Type</th>
+                    <td>Hard Winter Wheat</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- SECOND SECTION -->
+        <div class="coa-section-title">SPECIFICATION DETAILS</div>
+        <table class="table table-bordered coa-table">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Specification</th>
+                    <th>Results</th>
+                    <th>Methods</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <!-- Organoleptic Data -->
+                <tr><td colspan="4" style="background:#f6fff7; font-weight:600;">Organoleptic Data</td></tr>
+
+                <tr>
+                    <td>Appearance & Color</td>
+                    <td>Light yellow powder</td>
+                    <td>Confirm</td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Odor & Taste</td>
+                    <td>Normal taste, grain sweet smell</td>
+                    <td>Confirm</td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Fiber</td>
+                    <td>Not Detected</td>
+                    <td>Confirm</td>
+                    <td></td>
+                </tr>
+
+                <!-- Process Data -->
+                <tr><td colspan="4" style="background:#f6fff7; font-weight:600;">Process Data</td></tr>
+
+                <tr>
+                    <td>Protein</td>
+                    <td>Min.75% (N×5.7 on dry basis)</td>
+                    <td>75.9%</td>
+                    <td>GB/T5511</td>
+                </tr>
+
+                <tr>
+                    <td>Fat ff</td>
+                    <td>Max.1.3% (on dry basis)</td>
+                    <td>0.9%</td>
+                    <td>GB/T5009.6-2003</td>
+                </tr>
+
+                <tr>
+                    <td>Ash</td>
+                    <td>Max.1.0% (on dry basis)</td>
+                    <td>0.52%</td>
+                    <td>GB/T3505</td>
+                </tr>
+
+                <tr>
+                    <td>Moisture 70°</td>
+                    <td>Max.8% (normal 750%)</td>
+                    <td>7.6%</td>
+                    <td>GB/T5497</td>
+                </tr>
+
+                <tr>
+                    <td>Water absorption rate</td>
+                    <td>Min.150% (on dry basis)</td>
+                    <td>162%</td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Mesh Size 14V</td>
+                    <td>Min.95% Sieve 80 mesh</td>
+                    <td>99.7%</td>
+                    <td>GB/T5507</td>
+                </tr>
+
+                <!-- Physical Characteristics -->
+                <tr><td colspan="4" style="background:#f6fff7; font-weight:600;">Physical Characteristics</td></tr>
+
+                <tr>
+                    <td>Form 1M</td>
+                    <td>Powder</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Style 3.0</td>
+                    <td>Dried</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <!-- Heavy Metals -->
+                <tr><td colspan="4" style="background:#f6fff7; font-weight:600;">Heavy Metals</td></tr>
+
+                <tr>
+                    <td>Chromium (Cr)</td>
+                    <td>< 0.05mg/kg</td>
+                    <td>Confirm</td>
+                    <td>GB5009.12-2010</td>
+                </tr>
+
+                <tr>
+                    <td>DDT</td>
+                    <td>< 0.1mg/kg</td>
+                    <td>Confirm</td>
+                    <td>WM2-2001</td>
+                </tr>
+
+                <tr>
+                    <td>BHC</td>
+                    <td>5, 0 - 0.1</td>
+                    <td>Confirm</td>
+                    <td>WM2-2001</td>
+                </tr>
+
+                <!-- Microbiology -->
+                <tr><td colspan="4" style="background:#f6fff7; font-weight:600;">Microbiology</td></tr>
+
+                <tr>
+                    <td>Total Plate Count</td>
+                    <td>1000 CFU/g</td>
+                    <td>300 CFU/g</td>
+                    <td>GB4789.2-2010</td>
+                </tr>
+
+                <tr>
+                    <td>Total Yeast</td>
+                    <td>15 CFU/g</td>
+                    <td>Not Detected</td>
+                    <td>GB4789.15-2003</td>
+                </tr>
+
+                <tr>
+                    <td>Mold</td>
+                    <td>50 CFU/g</td>
+                    <td>Not Detected</td>
+                    <td>GB4789.15-2003</td>
+                </tr>
+
+                <tr>
+                    <td>E. Coli</td>
+                    <td>< 3 MPN/g</td>
+                    <td>Not Detected</td>
+                    <td>SN0169-92</td>
+                </tr>
+
+                <tr>
+                    <td>Salmonella</td>
+                    <td>Negative</td>
+                    <td>Confirm</td>
+                    <td>SN0170-1987</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+  <footer class="adm-footer pt-5 pb-4">
+        <div class="container">
+
+            <div class="row">
+
+                <!-- Logo + About -->
+                <div class="col-lg-4 col-md-6 mb-2">
+                    <a href="index.html"> <img src="./images/Header-Logo.png" class="footer-logo mb-3"
+                            alt="ADM Logo"></a>
+
+                    <p class="">
+                        SGU Trade is committed to providing top-quality ingredients and solutions
+                        that improve lives and empower industries globally.
+                    </p>
+
+                    <div class="footer-social mt-3">
+                        <a href="https://www.facebook.com/SubNutra-Food-Ingredients-583389272172215/"><i
+                                class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/subnutra_/"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/subnutra-food-ingredients/"><i
+                                class="bi bi-linkedin"></i></a>
+                        <a href="https://twitter.com/subnutra"><i class="bi bi-twitter"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6 mb-2">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="marketserved.html">Market Served</a></li>
+                        <li><a href="career.html">Career</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Ingredients -->
+                <div class="col-lg-3 col-md-6 mb-2">
+                    <h5 class="footer-title">Ingredients</h5>
+                    <ul class="footer-links">
+                        <li><a href="bakery.html">Bakery</a></li>
+                        <li><a href="confectionery.html">Confectionery</a></li>
+                        <li><a href="ice-cream.html">Ice-Cream and Toppings</a></li>
+                        <li><a href="beverages.html">Beverages</a></li>
+                        <li><a href="dairy.html">Dairy</a></li>
+                        <li><a href="health&Nutrition.html">Health & Nutrition</a></li>
+                        <li><a href="sauces.html">Sauces & Condiments</a></li>
+                        <li><a href="dairy.html">Edible Fat & Other Product</a></li>
+                    </ul>
+                </div>
+                <!-- Contact -->
+                <div class="col-lg-3 col-md-6 mb-2">
+                    <h5 class="footer-title">Contact</h5>
+
+                    <div class="footer-contact">
+
+                        <div class="contact-item address">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <p>
+                                SGU Trade Pvt Ltd. G-No.9/2, Mangal Compound, Behind Jaguar Showroom,
+                                Near Mittal Toll Kanta, Dewas Naka, Lasudia Mori, Indore,
+                                Madhya Pradesh 452010, India
+                            </p>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="bi bi-envelope-fill"></i>
+                            <p>info@sgutrade.com</p>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="bi bi-telephone-fill"></i>
+                            <p>+91-731-2550350</p>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+            <hr class="footer-line">
+
+            <div class="text-center  copyright">
+                © 2025 SGU Trade All rights reserved. Developed & Maintained by <a href="https://inforag.com/"
+                    class="fw-bold text-decoration-none text-black">Inforag Technology</a>
+            </div>
+    </footer>
+</body>
+
+</html>

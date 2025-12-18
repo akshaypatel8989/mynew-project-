@@ -1,0 +1,1690 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* ---------------- MOBILE HEADER ---------------- */
+.mobile-header {
+  display: none;
+  padding: 8px 15px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  /* background-color: #000; */
+  /* background: linear-gradient(135deg, #003300, #006600, #00a651); */
+}
+
+.mobile-logo {
+  max-width: 100px;
+  padding-bottom: 10px;
+}
+
+.hamburger {
+  font-size: 32px;
+  /* color: white; */
+  color: #000;
+  cursor: pointer;
+}
+
+/* ---------------- DESKTOP NAV ---------------- */
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 60px;
+  background-color: #fff;
+    /* background: linear-gradient(135deg, #003300, #006600, #00a651); */
+  /* background-color: #000; */
+}
+
+.logo img {
+  max-width: 150px;
+  width: 100%;
+  height: 80px;
+  padding-bottom: 15px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  margin-top: 10px;
+}
+
+/* ===== HOVER UNDERLINE EFFECT ===== */
+.menu a {
+  position: relative;
+  text-decoration: none;
+  /* color: white; */
+  color: #000;
+  font-size: 17px;
+  font-weight: 500;
+  padding-bottom: 3px;
+}
+
+.menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: white;
+  transition: width .3s ease;
+}
+
+.menu a:hover::after {
+  width: 100%;
+}
+/* ===== END UNDERLINE EFFECT ===== */
+
+/* Ingredients main button */
+.drop-btn {
+  /* color: white; */
+  color: #000;
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* ---------------- DESKTOP DROPDOWN ---------------- */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 35px;
+  background: white;
+  width: 230px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  padding: 12px;
+  list-style: none;
+  z-index: 999;
+}
+
+.dropdown-menu li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 15px;
+  padding: 6px 10px;
+  display: block;
+}
+
+/* ---------------- MOBILE SIDEMENU ---------------- */
+.side-menu {
+  width: 260px;
+  /* background: white; */
+  background: #111827;
+  /* background: linear-gradient(135deg, #003300, #006600, #00a651); */
+  position: fixed;
+  left: -300px;
+  top: 0;
+  height: 100%;
+  padding: 20px;
+  transition: left .3s ease;
+  z-index: 2000;
+}
+
+.side-menu a {
+  display: block;
+  padding: 12px 0;
+  /* color: #0b2c64; */
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+}
+.side-menu span{
+    color: #fff;
+}
+.close-btn {
+  font-size: 35px;
+  cursor: pointer;
+  text-align: right;
+  /* color: #0b2c64; */
+  color: #fff;
+}
+
+/* MOBILE DROPDOWN */
+
+.mobile-drop-btn {
+  gap: 12px;   /* New Gap Added */
+  display: flex;
+  align-items: center;
+}
+
+
+
+.mobile-drop-btn {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-size: 18px;
+  padding: 12px 0;
+  cursor: pointer;
+}
+
+.mobile-drop-btn a {
+  flex: 0;
+  margin-left: 5px;
+  
+}
+
+
+.mobile-dropdown {
+  margin-top: 10px;
+}
+
+.mobile-drop-btn {
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px 0;
+ color: #fff;
+}
+
+.mobile-drop-content {
+  display: none;
+  padding-left: 10px;
+}
+
+.mobile-drop-content a {
+  display: block;
+  padding: 6px 0;
+  font-size: 16px;
+  /* color: #333; */
+  color: #fff;
+  text-decoration: none;
+}
+
+/* ---------------- RESPONSIVE IMPROVEMENTS ---------------- */
+@media(max-width: 1200px){
+  .menu { gap: 35px; }
+}
+
+@media(max-width: 1024px){
+  .menu { gap: 25px; }
+  .main-nav { padding: 16px 30px; }
+}
+
+/* Switch to Mobile Header */
+@media(max-width: 900px){
+  .main-nav { display: none; }
+  .mobile-header { display: flex; }
+}
+
+/* Mobile logo sizes */
+@media(max-width: 600px){
+  .mobile-logo { max-width: 100px; }
+}
+
+@media(max-width: 400px){
+  .mobile-logo { max-width: 100px; }
+}
+
+
+
+
+/* * Slider Height  */
+/* Full screen slider */
+.slider-img {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Card overlapping slider */
+.slider-card {
+    position: absolute;
+    bottom: -60px;   /* 50% card slider ke niche */
+    left: 50%;
+    transform: translateX(-50%);
+    /* width: ; */
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 25px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+/* Bottom card section spacing */
+.bottom-card-section {
+    margin-top: 120px;
+    margin-bottom: 40px;
+}
+
+/* Custom arrows */
+.custom-arrow {
+    background-size: 50px;
+    height: 50px;
+    width: 50px;
+    filter: invert(1);
+}
+
+/* HERO SLIDER */
+      .hero-slider { height: 60vh; }
+      .hero-slide {
+        height: 60vh;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+      }
+      .hero-slide::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.35);
+        z-index: 1;
+      }
+      .hero-text {
+        position: relative;
+        z-index: 2;
+        color: white;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: center;
+        margin: 0 7px 0 7px;
+        padding: 0 10px 0 10;
+      }
+
+      /* HERO SLIDER BUTTON FIX */
+      #heroCarousel .carousel-control-prev,
+      #heroCarousel .carousel-control-next {
+        z-index: 5;
+        width: 60px;
+        height: 60px;
+        background: rgba(255,255,255,0.25);
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      #heroCarousel .carousel-control-prev-icon,
+      #heroCarousel .carousel-control-next-icon {
+        filter: invert(1);
+        width: 40px;
+        height: 40px;
+      }
+
+      /* BELOW CIRCLE SLIDER */
+      .thumb-row {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: nowrap; /* Desktop: 4 items in single row */
+}
+
+.thumb-box {
+  flex: 1 1 22%; /* 4 items per slide */
+  text-align: center;
+}
+
+.thumb {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #fff;
+  margin: auto;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.20);
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumb-name {
+  font-size: 18px;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.thumb-name a {
+  color: black;
+  text-decoration: none;
+}
+
+/* SLIDER BUTTONS */
+#thumbCarousel .carousel-control-prev,
+#thumbCarousel .carousel-control-next {
+  z-index: 4;
+  width: 50px;
+  height: 50px;
+  background: rgba(0,0,0,0.20);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#thumbCarousel .carousel-control-prev-icon,
+#thumbCarousel .carousel-control-next-icon {
+  filter: invert(1);
+}
+
+/* TABLET — 2 items per slide */
+@media (max-width: 768px) {
+
+  .thumb-row {
+    flex-wrap: wrap; /* allow 2-per-row */
+    gap: 1.5rem;
+  }
+
+  .thumb-box {
+    flex: 1 1 45%; /* 2 items per slide */
+  }
+
+  .thumb {
+    width: 150px;
+    height: 150px;
+  }
+
+  .thumb-name {
+    font-size: 16px;
+  }
+ 
+}
+
+/* MOBILE — 2 items per slide */
+@media (max-width: 480px) {
+
+  .thumb-row {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .thumb-box {
+    flex: 1 1 48%;
+  }
+
+  .thumb {
+    width: 110px;
+    height: 110px;
+  }
+
+  .thumb-name {
+    font-size: 14px;
+  }
+
+  #thumbCarousel .carousel-control-prev,
+  #thumbCarousel .carousel-control-next {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+
+
+/*-------------------------- Unlocking-section------------------------- */
+
+
+/* Section Styling */
+.Unlocking-section {
+  padding: 80px 0;
+}
+
+.Unlocking-section h1 {
+  font-weight: 800;
+  font-size: 2.5rem;
+}
+
+.Unlocking-section p {
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
+
+/* Buttons Group */
+.btn-group-custom .btn {
+  padding: 10px 20px;
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+/* Responsive Styling */
+@media (max-width: 991px) {
+  .Unlocking-section {
+    padding:50px 12px;
+  
+  }
+
+  .Unlocking-section h1 {
+    margin-top: 20px;
+    font-size: 2rem;
+    text-align: left;
+  }
+
+  .Unlocking-section p {
+    text-align: left;
+    font-size: 1rem;
+  }
+
+  
+
+  .unlock-image {
+    width: 100%;
+    /* max-width: 350px; */
+    /* margin: 0 auto; */
+  }
+}
+
+@media (max-width: 576px) {
+  .Unlocking-section{
+    width: 100%;
+  }
+  .Unlocking-section h1 {
+    font-size: 1.8rem;
+  }
+}
+
+/* --------------------------our solution----------------- */
+ .solutions-section {
+    padding: 60px 0;
+}
+
+/* TEXT */
+.solution-card h6 {
+    font-weight: 700;
+    margin-bottom: 6px;
+    margin-top: 30px;
+}
+.solution-card p {
+    font-size: 15px;
+    margin-bottom: 6px;
+    max-width: 600px;
+}
+.solution-card a {
+    font-weight: 600;
+    text-decoration: none;
+    color: #000;
+}
+
+/* WRAPPER */
+.image-wrapper {
+    position: relative;
+    width: 260px;      /* Desktop width (Your original design) */
+    height: 320px;     /* Desktop height */
+}
+
+/* GREEN BOX BEHIND IMAGE */
+.green-box {
+    position: absolute;
+    top: 0;
+    left: 80px;        /* Same alignment as screenshot */
+    width: 180px;
+    height: 100%;
+    background: #22c55e;
+    border-radius: 6px;
+    z-index: -1;
+}
+
+/* MAIN IMAGE */
+.image-wrapper img {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    width: 220px;
+    height: 270px;
+    object-fit: cover;
+}
+
+/* ---------------------- */
+/* RESPONSIVE FIXES */
+/* ---------------------- */
+
+/* Tablets */
+@media (max-width: 992px) {
+    .image-wrapper {
+        width: 220px;
+        height: 280px;
+    }
+    .green-box {
+        width: 150px;
+        left: 55px;
+    }
+    .image-wrapper img {
+        width: 190px;
+        height: 240px;
+    }
+}
+
+/* Mobile Landscape */
+@media (max-width: 768px) {
+    .image-wrapper {
+        width: 200px;
+        height: 250px;
+    }
+    .green-box {
+        width: 140px;
+        left: 30px;
+    }
+    .image-wrapper img {
+        width: 180px;
+        height: 220px;
+        top: 20px;
+    }
+    
+}
+
+/* Mobile Portrait */
+@media (max-width: 576px) {
+    .image-wrapper {
+        width: 180px;
+        height: 240px;
+    }
+    .green-box {
+        width: 130px;
+        left: 25px;
+    }
+    .image-wrapper img {
+        width: 165px;
+        height: 210px;
+        top: 18px;
+    }
+
+    .solution-card p {
+        font-size: 14px;
+
+    }
+   
+}
+
+/* ----------------------SGU stories----------------------- */
+.sgu-stories-section {
+    position: relative;
+}
+
+.sgu-image-wrap {
+    position: relative;
+}
+
+/* .sgu-main-img */
+
+ .sgu-image-wrap img{
+    width: 90%;
+    height:50%;
+    border-radius: 4px;
+}
+
+/* Blue Card Styling */
+.sgu-blue-card {
+    background: linear-gradient(90deg, #0078b7, #005f8f);;
+    color: white;
+    border-radius: 6px;
+    position: absolute;
+    top: 150px;
+    right: 125px;
+    width: 40%;
+    min-height: 250px;
+}
+
+/* --- Responsive --- */
+
+/* Tablets & below */
+@media (max-width: 992px) {
+    .sgu-blue-card {
+        position: static;
+        width: 100%;
+        margin-top: 20px;
+    }
+    .sgu-image-wrap img{
+        width: 100%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .sgu-blue-card {
+        padding: 20px;
+        text-align: center;
+    }
+    .sgu-image-wrap img{
+        width: 100%;
+    }
+}
+
+
+/* -----------------------procurement section----------------- */
+/* =====================
+   PROCESS SECTION CSS
+===================== */
+
+.proc-circle {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: #007abf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 32px;
+    font-weight: 700;
+    margin: auto;        /* Desktop – Center */
+}
+
+.proc-number {
+    font-size: 48px;
+    font-weight: 700;
+    color: #0078b7;
+    margin-bottom: 10px;
+}
+
+.proc-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    color: #000;
+    text-align: center;  /* Desktop – Center */
+}
+
+.proc-desc {
+    font-size: 14px;
+    color: #555;
+    max-width: 280px;
+    margin: auto;
+    text-align: center;
+}
+
+
+/* =====================
+   RESPONSIVE FIXES
+===================== */
+
+/* Mobile View (Left Align) */
+@media (max-width: 576px) {
+
+    .proc-circle {
+        width: 90px;
+        height: 90px;
+        font-size: 26px;
+        margin: 0;           /* remove centering */
+        margin-left: 0;      /* force left */
+    }
+
+    .proc-title {
+        font-size: 18px;
+        text-align: left;    /* title left */
+    }
+
+    .proc-desc {
+        text-align: left;    /* description left */
+        margin-left: 0;
+    }
+
+    .proc-number {
+        font-size: 36px;
+    }
+}
+
+
+/* Tablet & Small Laptop Fixes */
+@media (max-width: 992px) {
+
+    .position-lg-absolute {
+        position: static !important;
+        transform: none !important;
+        margin-top: 20px;
+    }
+
+    .adm-box {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+/* --------------- human nutritaion section------------- */
+.nutrition-section img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.nutrition-card p {
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+@media (max-width: 576px) {
+  .nutrition-heading h1 {
+    font-size: 26px;
+  }
+  .nutrition-card {
+    text-align: center !important;
+  }
+}
+
+/*-----------------------career section-------------- */
+.career-section {
+    position: relative;
+}
+
+/* Round Image */
+.career-circle-img {
+    width: 420px;
+    height: 420px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.career-circle-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .career-circle-img{
+        width: 300px;
+        height: 300px;
+    }
+}
+
+/* ---------------------------footer------------------ */
+/* ----------------- FOOTER ------------------ */
+.adm-footer {
+    /* background: #0b2c64;   Dark navy blue */
+background-color:#fff ;
+    color: #000;
+}
+
+.footer-logo {
+    max-width: 180px;
+    /* width: 100%; */
+    height: 60px;
+}
+
+/* List */
+.footer-title {
+    /* color: #4ade80;   Light green */
+    color: #000;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li a {
+    /* color: #d1d5db; */
+    color: #000;
+    text-decoration: none;
+    font-size: 15px;
+    display: block;
+    padding: 4px 0;
+    transition: 0.3s;
+}
+
+.footer-links li a:hover {
+    color: #22c55e;
+    padding-left: 4px;
+}
+
+/* Social Icons */
+.footer-social a {
+    /* color: white; */
+    color: #000;
+    font-size: 22px;
+    margin-right: 12px;
+    transition: 0.3s;
+}
+.text-light a{
+    color: #000;
+}
+.footer-social a:hover {
+    color: #22c55e;
+}
+
+.footer-line {
+    border-top: 1px solid #ffffff33;
+    margin: 20px 0;
+}
+
+
+/* Contact Flex Align */
+.footer-contact .contact-item {
+    display: flex;
+    align-items: flex-start;
+    /* color: #d1d5db; */
+    color: #000;
+    margin-bottom: 12px;
+}
+
+.footer-contact .contact-item i {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #000;;
+    /* color: #4ade80; Green */
+    margin-top: 3px;
+}
+
+.footer-contact .contact-item p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 20px;
+    color: #000;
+}
+
+/* Contact Flex Align */
+.footer-contact .contact-item {
+    display: flex;
+    align-items: center;    /* 👈 TOP → CENTER */
+    /* color: #d1d5db; */
+    color: #000;
+    margin-bottom: 12px;
+}
+
+.footer-contact .contact-item i {
+    font-size: 20px;
+    margin-right: 10px;
+    /* color: #4ade80; */
+    color: #000;
+    flex-shrink: 0;         /* 👈 icon squeeze nahi hoga */
+}
+
+.footer-contact .contact-item p {
+    color: #000;
+    margin: 0;
+    font-size: 15px;
+    line-height: 20px;
+}
+/* Address icon top aligned */
+.footer-contact .contact-item.address {
+    align-items: flex-start;
+}
+
+/* Responsive */
+@media(max-width: 767px){
+    .footer-title {
+        margin-top: 20px;
+    }
+}
+
+
+/*  */
+
+/* -------------innovation section---------- */
+/* ---------------------------------------- */
+/* BASE POSITIONING */
+/* ---------------------------------------- */
+
+.quine-left {
+    position: relative;
+    /* min-height: 450px; */
+    margin-bottom: 170px;
+}
+
+/* Background Circle Image */
+.quine-bg {
+    position: relative;
+    width: 65%;
+    max-width: 380px;
+    display: block;
+}
+
+/* Main Image */
+.quine-main {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    width: 50%;
+    max-width: 300px;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  
+}
+
+
+/* ---------------------------------------- */
+/* LARGE DESKTOP */
+/* ---------------------------------------- */
+@media (max-width: 1400px) {
+
+    .quine-main {
+        top: 25%;
+        left: 32%;
+        width: 48%;
+    }
+
+    .quine-bg {
+        width: 60%;
+    }
+}
+
+
+/* ---------------------------------------- */
+/* TABLET LANDSCAPE */
+/* ---------------------------------------- */
+@media (max-width: 992px) {
+
+    .quine-bg {
+        width: 70%;
+        max-width: 340px;
+    }
+
+    .quine-main {
+        top: 30%;
+        left: 30%;
+        width: 55%;
+    }
+}
+
+
+/* ---------------------------------------- */
+/* TABLET PORTRAIT */
+/* ---------------------------------------- */
+@media (max-width: 768px) {
+
+    .quine-left {
+        min-height: 380px;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .quine-bg {
+        width: 75%;
+        max-width: 330px;
+        /* margin: 0 auto; */
+    }
+
+    .quine-main {
+        top: 60%;
+        left: 50%;
+        width: 60%;
+        max-width: 260px;
+        transform: translate(-50%, -50%);
+    }
+}
+
+
+/* ---------------------------------------- */
+/* MOBILE */
+/* ---------------------------------------- */
+@media (max-width: 480px) {
+
+    .quine-bg {
+        width: 85%;
+        max-width: 280px;
+    }
+
+    .quine-main {
+        top: 55%;
+        left: 50%;
+        width: 70%;
+        max-width: 240px;
+        transform: translate(-50%, -50%);
+    }
+}
+
+
+/* unlock sdutrade */
+/* MAIN FULLSCREEN BLOCK */
+/* MAIN FULLSCREEN BLOCK */
+
+
+.adm-fullscreen {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    margin-bottom: 180px;
+    overflow: visible;
+}
+
+/* BACKGROUND IMAGE */
+.adm-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;      /* PERFECT responsive */
+    object-position: center top;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* CARD */
+.adm-card {
+    position: absolute;
+    z-index: 10;
+    background: #ffffff;
+    padding: 45px;
+    width: 34%;
+    max-width: 500px;
+    right: 6%;
+    bottom: -15%;
+    border-radius: 20px;
+    box-shadow: 0 14px 35px rgba(0,0,0,0.25);
+}
+
+/* HEADING */
+.adm-card h2 {
+    font-size: 40px;
+    line-height: 1.2;
+}
+
+/* ------------------------------------------------------ */
+/* RESPONSIVE */
+/* ------------------------------------------------------ */
+
+@media (max-width: 1400px) {
+    .adm-card {
+        width: 40%;
+        bottom: -13%;
+        right: 5%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .adm-card {
+        width: 45%;
+        bottom: -12%;
+    }
+}
+
+@media (max-width: 992px) {
+    .adm-card {
+        width: 55%;
+        right: 5%;
+        bottom: -10%;
+    }
+    .adm-card h2 {
+        font-size: 32px;
+    }
+}
+
+/* TABLET */
+@media (max-width: 768px) {
+    .adm-fullscreen {
+        height: 90vh;
+    }
+
+    .adm-card {
+        width: 80%;
+        left: 50%;
+        right: auto;
+        bottom: -12%;
+        transform: translateX(-50%);
+        text-align: center;
+        padding: 35px;
+    }
+
+    .adm-card h2 {
+        font-size: 28px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 576px) {
+    .adm-fullscreen {
+        height: 70vh;
+        margin-bottom: 150px;
+    }
+
+    .adm-bg {
+        object-fit: cover;       /* keep it cover */
+        object-position: top;    /* focus top area */
+        height: 100%;            /* maintain ratio */
+    }
+
+    .adm-card {
+        width: 92%;
+        bottom: -15%;
+        padding: 28px;
+        /* margin-bottom: 50px; */
+    }
+
+    .adm-card h2 {
+        font-size: 24px;
+    }
+}
+/* -------------food beverage section-------------------- */
+.food-beverage-section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .food-beverage-section {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .food-beverage-section h2 {
+        font-size: 28px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .food-beverage-section {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    .food-beverage-section h2 {
+        font-size: 24px;
+    }
+   
+}
+
+.food-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Extra fix for big images */
+@media (max-width: 768px) {
+    .food-img {
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+}
+.food-beverage-section h2{
+  margin-top: 20px;
+}
+
+/* Highest fix for very small screens */
+@media (max-width: 480px) {
+    .food-img {
+        width: 100%;
+        height: auto;
+    }
+    .food-beverage-section h2{
+  margin-top: 20px;
+}
+}
+
+
+
+/*  */
+.ds-wrap {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    position: relative;
+    margin-bottom: 150px;
+}
+
+/* IMAGE HOLDER */
+.ds-image-box {
+    width: 100%;
+    height: 490px;
+    border-radius: 18px;
+    overflow: hidden;
+    position: relative;
+}
+
+.ds-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* OVERLAP CARD (DESKTOP) */
+.ds-info-card {
+    position: absolute;
+    right: 40px;
+    bottom: -80px;
+    width: 40%;
+    background: #fff;
+    border-radius: 18px;
+    padding: 25px 25px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.15);
+}
+
+/* CARD TEXT */
+.ds-info-title {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #2b2b2b;
+}
+
+.ds-info-text {
+    font-size: 17px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* MEDIUM SCREENS */
+@media (max-width: 992px) {
+    .ds-info-card {
+        width: 55%;
+        right: 50px;
+        bottom: -70px;
+    }
+
+    .ds-info-title {
+        font-size: 26px;
+    }
+}
+
+/* SMALL SCREENS */
+@media(max-width: 768px) {
+
+    .ds-image-box {
+        height: 280px;
+    }
+
+    .ds-info-card {
+        position: relative;
+        width: 80%;
+        right: 0;
+        left: 10%;
+        bottom: 0;
+        margin-top: -40px;
+        transform: none;
+    }
+
+    .ds-info-title {
+        font-size: 24px;
+    }
+
+    .ds-info-text {
+        font-size: 15px;
+    }
+}
+/*---------------------------cb Contact section-------------------------- */
+ .contact-block {
+            width: 100%;
+            background: linear-gradient(90deg, #0078b7, #005f8f);
+            border-radius: 6px;
+            padding: 80px 60px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            overflow: hidden;
+           
+        }
+
+        /* LEFT TEXT */
+        .cb-content {
+            max-width: 550px;
+            color: #ffffff;
+        }
+
+        .cb-title {
+            font-size: 40px;
+            font-weight: 700;
+            margin: 20px 0 15px;
+        }
+
+        .cb-text {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        /* BUTTON */
+        .cb-btn {
+            padding: 14px 40px;
+            /* background: #ffffff; */
+            border-radius: 40px;
+            border: none;
+            font-size: 16px;
+            font-weight: 600;
+            /* color: #007ab8; */
+            cursor: pointer;
+        }
+
+        /* RIGHT IMAGE (your ADM URL image) */
+        /* .cb-photo {
+            position: absolute;
+            right: 40px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 360px;
+        } */
+     
+
+        /* RESPONSIVE */
+        @media (max-width: 992px) {
+            .contact-block {
+                flex-direction: column;
+                padding: 50px 30px;
+            }
+
+            .cb-photo {
+                position: relative;
+                width: 100%;
+                max-width: 380px;
+                right: 0;
+                transform: none;
+                margin-top: 40px;
+            }
+
+            .cb-title {
+                font-size: 32px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .cb-title {
+                font-size: 28px;
+            }
+
+            .cb-text {
+                font-size: 16px;
+            }
+
+            .cb-photo {
+                max-width: 100%;
+            }
+        }
+
+
+
+        /* 
+         */
+         .left-box {
+    background: #4b008f;
+    padding: 110px 60px;
+    color: white;
+    position: relative;
+}
+
+.main-title {
+    font-size: 55px;
+    font-weight: 700;
+    line-height: 65px;
+}
+
+.sub-text {
+    margin-top: 20px;
+    font-size: 18px;
+    max-width: 480px;
+}
+
+/* RIGHT IMAGE */
+.right-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ONLY ONE OVERLAP IMAGE (Your uploaded image) */
+.overlap-img {
+    position: absolute;
+    bottom: -50px;
+    right: -80px;
+    width: 300px;
+    z-index: 5;
+    border-radius: 12px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .left-box {
+        text-align: center;
+        padding: 60px 30px;
+    }
+
+    .main-title {
+        font-size: 38px;
+        line-height: 48px;
+    }
+
+    .overlap-img {
+        position: static;
+        margin: 30px auto 0;
+        display: block;
+    }
+}
+
+
+/* interigent */
+/* COMMON SECTION WRAPPER */
+.section-block {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/* COMMON TITLE */
+.section-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #000;
+}
+
+/* COMMON PARAGRAPH */
+.section-desc {
+    max-width: 850px;
+    margin: 0 auto;
+    font-size: 17px;
+    line-height: 1.7;
+    color: #444;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 576px) {
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .section-desc {
+        font-size: 15px;
+        line-height: 1.55;
+        padding: 0 12px;
+    }
+}
+
+
+
+/* ingrident */
+.category-box {
+            background: #fff;
+            border-radius: 6px;
+            padding: 0;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .category-header {
+            background: #3fb447;
+            padding: 15px;
+            color: #fff;
+            font-size: 28px;
+            font-weight: 700;
+            border-radius: 6px 6px 0 0;
+        }
+
+        .category-items {
+            padding: 20px;
+        }
+
+        /* .dropdown-toggle-btn {
+            font-weight: 600;
+            cursor: pointer;
+        } */
+        .dropdown-toggle-btn {
+            font-weight: normal !important;
+            cursor: pointer;
+        }
+
+        .sub-list {
+            margin-left: 25px;
+            margin-top: 5px;
+        }
+
+        .equal-card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        /* ingrdient hero section */
+         /* MAIN WRAPPER */
+        .sgu-hero {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* LEFT PURPLE AREA (75%) */
+        .sgu-left {
+            position: absolute;
+            left: 0;
+            top: 0;
+          background: linear-gradient(90deg, #0078b7, #005f8f);
+            width: 75%;
+            height: 80%;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding-left: 90px;
+            padding-right: 50px;
+            z-index: 2;
+        }
+
+        .sgu-content {
+            max-width: 650px;
+        }
+
+        .sgu-heading {
+            font-size: 55px;
+            font-weight: 700;
+            line-height: 1.1;
+        }
+
+        .sgu-text {
+            margin-top: 28px;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        /* RIGHT SIDE GRAIN BACKGROUND (25%) */
+        .sgu-grain {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 25%;
+            height: 80%;
+            background-image: url("https://i.pinimg.com/736x/1e/4e/9f/1e4e9f946a43f545ef0b67c677f083c1.jpg");
+            background-size: cover;
+            background-position: center;
+            z-index: 1;
+        }
+
+        /* FOOD IMAGE */
+        .sgu-food {
+            position: absolute;
+            top: 40%;
+            right: 5%;
+            transform: translateY(-50%);
+            width: 35%;
+            border-radius: 6px;
+            object-fit: cover;
+            z-index: 3;
+        }
+
+        /* RESPONSIVE FOR TABLET / MOBILE */
+        @media(max-width: 992px) {
+
+            .sgu-hero {
+                height: auto;
+                padding-bottom: 40px;
+            }
+
+            /* IMAGE TOP FULL WIDTH */
+            .sgu-food {
+                position: relative;
+                width: 100%;
+                height: auto;
+                top: 0;
+                right: 0;
+                transform: none;
+                border-radius: 0;
+                display: block;
+            }
+
+            /* HIDE GRAIN COMPLETELY */
+            .sgu-grain {
+                display: none;
+            }
+
+            /* PURPLE BOX BELOW IMAGE */
+            .sgu-left {
+                position: relative;
+                width: 100%;
+                height: auto;
+                padding: 40px 25px;
+                margin-top: -5px;
+            }
+
+            .sgu-heading {
+                font-size: 40px;
+            }
+        }
+        /* FIX FOR 1024px – TABLET LANDSCAPE */
+@media (max-width: 1024px) {
+
+    .sgu-hero {
+        height: auto;
+        padding-bottom: 40px;
+    }
+
+    /* FOOD IMAGE SHOULD NOT BE ABSOLUTE */
+    .sgu-food {
+        position: relative !important;
+        width: 100% !important;
+        height: auto !important;
+        top: 0 !important;
+        right: 0 !important;
+        transform: none !important;
+        border-radius: 0;
+        margin-bottom: 0;
+        z-index: 1;
+    }
+
+    /* LEFT CONTENT BOX COMES BELOW IMAGE */
+    .sgu-left {
+        position: relative !important;
+        width: 100% !important;
+        height: auto !important;
+        padding: 50px 35px !important;
+        margin-top: 0 !important;
+        z-index: 2;
+    }
+
+    /* Grain hide */
+    .sgu-grain {
+        display: none !important;
+    }
+}
+
+@media (max-width: 575.98px) {
+  
+  .proc-circle{
+    margin:auto;
+    text-align: center
+  }
+  .proc-title{
+    text-align: center;
+  }
+}
+
